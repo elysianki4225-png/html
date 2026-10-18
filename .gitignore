@@ -1,0 +1,8 @@
+# Build/test artefacts
+tools/__pycache__/
+*.pyc
+qa-*.png
+sec-*.png
+m-*.png
+d-*.png
+final-*.png

@@ -1,0 +1,126 @@
+<div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle" hidden>
+  <div class="modal__backdrop" data-close-quote></div>
+  <div class="modal__dialog" role="document">
+    <div class="modal__head">
+      <p class="modal__eyebrow" data-i18n="modal.eyebrow">REQUEST FOR QUOTATION · 出口报价</p>
+      <h2 class="modal__title" id="quoteModalTitle" data-i18n="modal.title">让下一柜，准时抵达。</h2>
+      <p class="modal__sub" data-i18n="modal.sub">填写果品、数量与目的港，出口部将在 1 个工作日内回复可执行报价与最新船期。</p>
+      <button type="button" class="modal__close" data-close-quote aria-label="关闭报价表单">
+        <svg aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+
+    <div class="modal__body">
+      <form id="quoteForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="qCompany"><span data-i18n="modal.company">公司名称</span> <span class="req">*</span></label>
+            <input type="text" id="qCompany" name="company" autocomplete="organization" placeholder="e.g. Sakura Fresh Trading Co., Ltd." required>
+            <span class="field__error" data-i18n="modal.err.company">请填写公司名称</span>
+          </div>
+          <div class="field">
+            <label for="qName"><span data-i18n="modal.name">联系人</span> <span class="req">*</span></label>
+            <input type="text" id="qName" name="name" autocomplete="name" placeholder="e.g. Tanaka Hiroshi" required>
+            <span class="field__error" data-i18n="modal.err.name">请填写联系人姓名</span>
+          </div>
+          <div class="field">
+            <label for="qEmail"><span data-i18n="modal.email">商务邮箱</span> <span class="req">*</span></label>
+            <input type="email" id="qEmail" name="email" autocomplete="email" placeholder="name@company.com" required>
+            <span class="field__error" data-i18n="modal.err.email">请填写有效的邮箱地址</span>
+          </div>
+          <div class="field">
+            <label for="qPhone" data-i18n="modal.phone">电话 / WhatsApp</label>
+            <input type="tel" id="qPhone" name="phone" autocomplete="tel" placeholder="+81 90 0000 0000">
+          </div>
+          <div class="field">
+            <label for="qCountry"><span data-i18n="modal.country">目的国家 / 港口</span> <span class="req">*</span></label>
+            <select id="qCountry" name="country" required>
+              <option value="" data-i18n="modal.choose">请选择</option>
+              <option value="Japan / Tokyo" data-i18n="modal.country.jp">日本 · 东京 / 横滨</option>
+              <option value="Singapore" data-i18n="modal.country.sg">新加坡</option>
+              <option value="Malaysia / Port Klang" data-i18n="modal.country.my">马来西亚 · 巴生港</option>
+              <option value="Indonesia / Jakarta" data-i18n="modal.country.id">印度尼西亚 · 雅加达</option>
+              <option value="UAE / Jebel Ali" data-i18n="modal.country.ae">阿联酋 · 杰贝阿里</option>
+              <option value="Netherlands / Rotterdam" data-i18n="modal.country.nl">荷兰 · 鹿特丹</option>
+              <option value="Australia / Sydney" data-i18n="modal.country.au">澳大利亚 · 悉尼</option>
+              <option value="Other" data-i18n="modal.country.other">其他国家 / 港口</option>
+            </select>
+            <span class="field__error" data-i18n="modal.err.country">请选择目的国家或港口</span>
+          </div>
+          <div class="field">
+            <label for="qProduct"><span data-i18n="modal.product">意向果品</span> <span class="req">*</span></label>
+            <select id="qProduct" name="product" required>
+              <option value="" data-i18n="modal.choose">请选择</option>
+              <option value="Shine Muscat" data-i18n="modal.product.grape">阳光玫瑰青提 / Shine Muscat</option>
+              <option value="Fuji Apple" data-i18n="modal.product.apple">红富士苹果 / Fuji Apple</option>
+              <option value="Gannan Navel Orange" data-i18n="modal.product.orange">赣南脐橙 / Gannan Navel</option>
+              <option value="Mixed / OEM" data-i18n="modal.product.mixed">混柜 / OEM 定制</option>
+              <option value="Other" data-i18n="modal.product.other">其他果品</option>
+            </select>
+            <span class="field__error" data-i18n="modal.err.product">请选择意向果品</span>
+          </div>
+          <div class="field">
+            <label for="qQuantity" data-i18n="modal.quantity">预计数量</label>
+            <input type="text" id="qQuantity" name="quantity" placeholder="1 × 40' RF / month">
+          </div>
+          <div class="field">
+            <label for="qIncoterm" data-i18n="modal.incoterm">贸易术语</label>
+            <select id="qIncoterm" name="incoterm">
+              <option value="FOB Qingdao">FOB Qingdao</option>
+              <option value="CIF">CIF</option>
+              <option value="CFR">CFR</option>
+              <option value="DAP">DAP</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="qDate" data-i18n="modal.date">预计到港月份</label>
+            <input type="month" id="qDate" name="date">
+          </div>
+          <div class="field field--full">
+            <label for="qMessage" data-i18n="modal.message">规格与包装要求</label>
+            <textarea id="qMessage" name="message" rows="3" placeholder="Brix, size, carton mark, destination label, cold-treatment requirement…"></textarea>
+          </div>
+          <div class="consent" id="consentWrap">
+            <input type="checkbox" id="qConsent" name="consent" required>
+            <label for="qConsent"><span data-i18n="modal.consent">我同意 ORCHARD LINE 仅将以上信息用于本次报价沟通，并已阅读隐私政策。</span> <span class="req">*</span></label>
+          </div>
+        </div>
+        <div class="form-foot">
+          <p class="form-foot__note" data-i18n="modal.note">响应时间 ≤ 1 个工作日（GMT+8）。演示表单不会向服务器发送数据；提交后可选择通过邮件客户端发送至 export@orchardline.cn。</p>
+          <button type="submit" class="btn" id="quoteSubmit">
+            <span data-i18n="modal.submit">生成报价请求</span>
+            <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+          </button>
+        </div>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="quote-success" id="quoteSuccess" hidden>
+        <div class="quote-success__icon"><svg aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 data-i18n="modal.success.title">报价请求已生成</h3>
+        <p data-i18n="modal.success.body">感谢您对 ORCHARD LINE 的信任。以下为本次询盘摘要，点击“通过邮件发送”即可交给出口部；我们将在 1 个工作日内回复。</p>
+        <span class="quote-ref" id="quoteRef">RFQ-2026-000000</span>
+        <div class="quote-summary" id="quoteSummary"></div>
+        <div class="quote-success__actions">
+          <a class="btn" id="quoteMailto" href="mailto:export@orchardline.cn">
+            <span data-i18n="modal.success.send">通过邮件发送</span>
+            <svg aria-hidden="true"><use href="#i-mail"/></svg>
+          </a>
+          <button type="button" class="btn btn--outline" id="copyRef">
+            <span data-i18n="modal.success.copy">复制询盘编号</span>
+            <svg aria-hidden="true"><use href="#i-copy"/></svg>
+          </button>
+          <button type="button" class="btn btn--outline" data-close-quote>
+            <span data-i18n="modal.success.close">返回页面</span>
+          </button>
+        </div>
+        <p class="quote-disclaimer" data-i18n="modal.success.note">演示提示：本页面未连接后端服务；请通过邮件发送以完成真实询盘。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg aria-hidden="true"><use href="#i-check"/></svg>
+  <span id="toastText"></span>
+</div>
