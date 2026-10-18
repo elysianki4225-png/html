@@ -20,7 +20,7 @@
     'js.clock': '青岛 {time} · GMT+8',
     'js.copied': '已复制到剪贴板',
     'js.copyFail': '复制失败，请手动选择编号',
-    'js.demoLink': '演示站点：该文件暂未提供',
+    'js.docRequest': '请通过 compliance@orchardline.cn 获取该文件',
     'js.invalid': '请检查高亮的必填项',
     'js.mailSubject': '出口报价请求 — ORCHARD LINE',
     'js.mailIntro': '以下为本次出口报价请求：',
@@ -327,9 +327,9 @@
   });
 
   document.addEventListener('click', (event) => {
-    if (event.target.closest('[data-demo-link]')) {
+    if (event.target.closest('[data-doc-link]')) {
       event.preventDefault();
-      showToast(t('js.demoLink'));
+      showToast(t('js.docRequest'));
     }
   });
 

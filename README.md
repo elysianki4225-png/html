@@ -1,11 +1,18 @@
 # ORCHARD LINE · 果园航线
 
 **高保真、国际化、带完整合规资质的生鲜水果出口贸易公司官方单页网站**
-A high-fidelity, bilingual (EN / 中文 / 日本語) single-page website for a fresh-fruit export house.
+A high-fidelity, multilingual (EN / 中文 / 日本語) single-page website for a fresh-fruit export house.
 
-> **交付物 / Deliverable: [`index.html`](index.html)** — 单文件，双击即可打开。
-> 所有 CSS、JS、图片、字体与航线地图均已内联，无构建依赖、无本地资源请求。
-> 唯一的外部请求是 Tailwind CSS CDN 与 Google Fonts（用于中日文字形）；离线时会自动回退到系统字体，版式与交互不受影响。
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-elysianki4225--png.github.io-0C231A?style=flat-square)](https://elysianki4225-png.github.io/html/)
+[![Repository](https://img.shields.io/badge/GitHub-elysianki4225--png%2Fhtml-C3A267?style=flat-square&logo=github)](https://github.com/elysianki4225-png/html)
+
+| | 地址 |
+|---|---|
+| **在线演示 / Live demo** | **<https://elysianki4225-png.github.io/html/>** |
+| **GitHub 仓库 / Repository** | **<https://github.com/elysianki4225-png/html>** |
+| **单页文件 / Deliverable** | [`index.html`](index.html) |
+
+演示站由 GitHub Pages 从 `main` 分支根目录发布；单文件 `index.html` 也可直接下载双击打开，无需服务器与构建步骤。
 
 ---
 
@@ -22,7 +29,7 @@ A high-fidelity, bilingual (EN / 中文 / 日本語) single-page website for a f
 | 6 | 合规公示 | 海关报关代码、出境果园与包装厂注册号、GLOBALG.A.P. GGN、ISO 22000、HACCP、AEO；工商与法人信息；目的国准入表；出口单证清单。编号支持一键复制 |
 | 7 | 冷链物流 | 青岛港前湾冷链泊位、深圳蛇口港、TAO / CGO / PVG 空运枢纽、互动式航线地图、主干航线温控表、六节点作业规程 |
 | 8 | 人才招聘 | 生鲜冷链外贸业务主管、出境水果检验检疫品控员（含职责、要求、薪酬、投递入口） |
-| 9 | 询盘 CTA + 页脚 | 双语公司全称、三处果园基地与分选冷库地址、外贸邮箱、电话、统一社会信用代码、ICP 备案、演示免责声明 |
+| 9 | 询盘 CTA + 页脚 | 双语公司全称、三处果园基地与分选冷库地址、外贸邮箱、电话、统一社会信用代码、ICP / 公安备案 |
 
 ## 交互
 
@@ -36,11 +43,37 @@ A high-fidelity, bilingual (EN / 中文 / 日本語) single-page website for a f
 ## 技术与质量
 
 - HTML5 + Tailwind CSS（CDN）+ 一套自有设计系统（森林绿 `#0C231A` / 象牙白 `#F6F2E8` / 黄铜 `#C3A267`）。
-- 品牌展示字体 **Fraunces** 与 **Inter** 以 WOFF2 内联自托管，离线亦保持排版质感。
+- 单文件交付：CSS、JS、6 张 WebP 摄影图、航线地图 SVG、Fraunces / Inter 及中日文 Noto 字体子集全部内联。
 - 语义化结构、跳至主内容链接、`aria-current` / `aria-selected` / `aria-modal`、焦点陷阱与 Esc 关闭、`aria-live` 表单状态。
-- 响应式：1440 / 1280 / 1024 / 900 / 768 / 640 / 390 px 逐档验证，无横向溢出。
-- SEO：`title` / `description` / Open Graph / canonical / Organization JSON-LD / favicon。
-- **演示免责声明**：企业名称、地址、证书与注册编号均为示例数据，页面多处明确标注，不构成真实资质或贸易要约。
+- 响应式：360 / 390 / 414 / 768 / 834 / 1024 / 1280 / 1440 px 逐档验证，无横向溢出。
+- SEO：`title` / `description` / Open Graph / canonical / hreflang / Organization JSON-LD / favicon。
+
+## 视觉预览 / Preview
+
+`preview/` 目录内含 16 张桌面与移动端截图（中文 / English / 日本語），覆盖首屏、数据看板、果品、合规、物流地图、招聘、联系、页脚与报价表单。
+
+## 语言与字体
+
+- 中文为源语言（`lang="zh-CN"`），英 / 日文案为独立词典，切换后同步更新 `<html lang>`、`<title>`、描述、Open Graph 与 URL（`?lang=en|ja`），并在 `localStorage` 中记忆。
+- 拉丁展示字体 Fraunces / Inter 与中日文 Noto Serif / Sans 子集全部以 WOFF2 内联，无 Web Font 依赖；因此断网、内网或字体 CDN 被屏蔽时，排版依旧成立。
+- 地图由 Natural Earth 数据 + d3-geo 生成，矢量内联，可无损缩放。
+
+---
+
+## 免责声明 / Disclaimer
+
+> **本站为品牌与前端能力的演示站点。**
+> 页面中的企业名称、地址、电话、统一社会信用代码、海关报关代码、CIQ 果园 / 包装厂注册号、GLOBALG.A.P. GGN、ISO 22000 / HACCP 证书编号、法定代表人、注册资本、业务指标、船期与温控数据等，均为**虚构或示例信息**，不代表任何真实主体，不构成真实资质证明、市场准入承诺、报价或贸易要约。页面使用的图片为情境示意，不代表实际果园、设施、产品或包装。相关认证名称、监管机构与 HS 编码仅用于展示行业规范与页面结构。
+>
+> **正式使用时**，请将上述信息替换为经核验的真实资料，并以加盖公章的证照副本、官方公示系统查询结果及双方签署的合同为准，同时复核《广告法》《进出口商品检验法》及海关、检验检疫、ICP 备案等适用要求。
+>
+> **This is a demonstration website.** All company names, addresses, phone numbers, registration numbers, certificate numbers, business metrics and operational data shown are fictitious or illustrative. They do not represent any real entity and do not constitute proof of credentials, a market-access commitment, a quotation or an offer to trade. Images are illustrative only. Replace all data with verified information before any real-world use.
+
+## 部署 / Deployment
+
+- GitHub Pages：`main` 分支根目录 → <https://elysianki4225-png.github.io/html/>
+- 本地预览：直接打开 `index.html`，或 `python3 -m http.server 8000`
+- 更新站点：修改 `tools/parts/` 后执行 `python3 tools/cjk_fonts.py && python3 tools/build.py`，提交新的 `index.html`
 
 ## 修改与重新构建
 
@@ -49,38 +82,18 @@ A high-fidelity, bilingual (EN / 中文 / 日本語) single-page website for a f
 ```
 tools/
 ├── build.py            # 将 CSS / JS / 图片 / 字体 / 地图内联为单文件
-├── map.svg             # 由 Natural Earth 数据生成的世界航线图（Equirectangular / Natural Earth 投影）
+├── cjk_fonts.py        # 按页面实际用字裁剪中日文字体子集
+├── map.svg             # Natural Earth 世界航线图
 └── parts/
     ├── 00_head.html  … 86_app.html   # 页面分块
-    ├── style.css                     # 设计系统与响应式、打印样式
+    ├── style.css                     # 设计系统、响应式与打印样式
     ├── i18n-en.js, i18n-ja.js        # 英 / 日文案表（中文为 HTML 源文案）
     └── app.js                        # 语言切换、模态框、标签页、地图、计数器等
 ```
 
-重新生成：
-
 ```bash
-python3 tools/build.py   # → index.html（约 1.3 MB，自包含）
+python3 tools/cjk_fonts.py   # 仅当页面文案改动时执行
+python3 tools/build.py       # → index.html（约 2.6 MB，自包含）
 ```
 
-修改图片：替换 `assets/img/*.webp` 后在 `build.py` 的 `IMAGES` 中保持同名即可；字体位于 `assets/fonts/`。
-
----
-
-© 2026 Qingdao Orchard Line Fruit & Vegetable Import & Export Co., Ltd. — demo brand.
-
----
-
-## 视觉预览 / Preview
-
-`preview/` 目录内含 16 张桌面与移动端截图（中文 / English / 日本語），覆盖首屏、数据看板、果品、合规、物流地图、招聘、联系、页脚与报价表单。
-
-## 语言与字体
-
-- 中文为源语言（`lang="zh-CN"`），英 / 日文案为独立词典（各 ~410 条），切换后同步更新 `<html lang>`、`<title>`、描述、Open Graph 与 URL（`?lang=en|ja`），并在 `localStorage` 中记忆。
-- 拉丁展示字体 Fraunces / Inter 与中日文 Noto Serif / Sans 子集全部以 WOFF2 内联，无 Web Font 依赖；因此断网、内网或字体 CDN 被屏蔽时，排版依旧成立。
-- 地图由 Natural Earth 数据 + d3-geo 生成，矢量内联，可无损缩放。
-
-## 数据合规说明
-
-页面中的企业名称、统一社会信用代码、海关编码、CIQ 注册号、GGN、ISO / HACCP 证书编号、地址、电话与业务指标均为**演示用示例数据**，页脚与合规区均已明确声明。上线前请替换为真实证照信息，并按当地广告法、海关与检验检疫公示要求复核。
+图片位于 `assets/img/`，字体位于 `assets/fonts/`；替换后在 `build.py` 中保持文件名一致即可。
