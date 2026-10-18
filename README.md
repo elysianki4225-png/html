@@ -58,17 +58,6 @@ A high-fidelity, multilingual (EN / 中文 / 日本語) single-page website for 
 - 拉丁展示字体 Fraunces / Inter 与中日文 Noto Serif / Sans 子集全部以 WOFF2 内联，无 Web Font 依赖；因此断网、内网或字体 CDN 被屏蔽时，排版依旧成立。
 - 地图由 Natural Earth 数据 + d3-geo 生成，矢量内联，可无损缩放。
 
----
-
-## 免责声明 / Disclaimer
-
-> **本站为品牌与前端能力的演示站点。**
-> 页面中的企业名称、地址、电话、统一社会信用代码、海关报关代码、CIQ 果园 / 包装厂注册号、GLOBALG.A.P. GGN、ISO 22000 / HACCP 证书编号、法定代表人、注册资本、业务指标、船期与温控数据等，均为**虚构或示例信息**，不代表任何真实主体，不构成真实资质证明、市场准入承诺、报价或贸易要约。页面使用的图片为情境示意，不代表实际果园、设施、产品或包装。相关认证名称、监管机构与 HS 编码仅用于展示行业规范与页面结构。
->
-> **正式使用时**，请将上述信息替换为经核验的真实资料，并以加盖公章的证照副本、官方公示系统查询结果及双方签署的合同为准，同时复核《广告法》《进出口商品检验法》及海关、检验检疫、ICP 备案等适用要求。
->
-> **This is a demonstration website.** All company names, addresses, phone numbers, registration numbers, certificate numbers, business metrics and operational data shown are fictitious or illustrative. They do not represent any real entity and do not constitute proof of credentials, a market-access commitment, a quotation or an offer to trade. Images are illustrative only. Replace all data with verified information before any real-world use.
-
 ## 部署 / Deployment
 
 - GitHub Pages：`main` 分支根目录 → <https://elysianki4225-png.github.io/html/>
